@@ -3,18 +3,14 @@ cwm-recovery-6.0.3.7中文源码
 作者：Ruling
 
 采用Ruby生成字库方法汉化（感谢最初做出汉化代码的大神）
-
 编译recovery以及汉化全过程。
 
 1、创建一个存放源码的目录(我创建的目录名字叫cm10.1)，cm10.1要改为自己的源码目录,下面每一步也一样
 mkdir -p ~/cm10.1
 然后定位到目录
 cd ~/cm10.1
-输入以下代码:
-PATH=~/bin:$PATH
-用repo获取列表
-CM10.1命令
-repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
+输入以下代码:PATH=~/bin:$PATH
+用repo获取列表CM10.1命令repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
 repo sync -j16
 2、同步完成后，执行下面命令，完成环境的安装
 获取预编译应用
@@ -37,7 +33,7 @@ export PATH=$PATH:~/cm10.1/out/host/linux-x86/bin
 保存退出，执行下面命令，让刚加的环境变量生效：
 source ~/.bashrc
 5、由内核获取Device
-build/tools/device/mkvendor.sh htc m4 boot.img
+. build/tools/device/mkvendor.sh htc m4 boot.img
 6、开始编译，执行命令(把cp2dug替换为自己的机型):
 . build/tools/device/makerecoveries.sh full_m4-eng
 下一步命令，编译开始：
@@ -46,16 +42,6 @@ make -j16 recoveryimage
 
 注释：
 recovery_ui.c 这个文件里面是手机各按键对应的按键值，这样写入之后才能正确选择按键。
-参考资料：
-Porting CWM to other devices：
-http://www.acsyndicate.net/how-t … er-devices-windows/
-Creating a custom ClockWorkMod (CWM)Recovery image：
-http://www.twobitcoder.com/?p=158
-Porting Clockwork Recovery to ourGarminfone：
-http://mygarminfone.blogspot.com … ecovery-to-our.html
-Porting Clockwork Recovery to New Devices：
-http://www.koushikdutta.com/2010 … ecovery-to-new.html
-
 
 7、汉化
 1)、准备工作：
