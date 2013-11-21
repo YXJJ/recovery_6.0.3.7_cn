@@ -1,10 +1,8 @@
-
 cwm-recovery-6.0.3.7中文源码
 
 作者：Ruling
 
 采用Ruby生成字库方法汉化（感谢最初做出汉化代码的大神）
-
 
 编译recovery以及汉化全过程。
 
