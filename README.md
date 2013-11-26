@@ -65,7 +65,7 @@ source ~/.bashrc
 
 . build/tools/device/mkvendor.sh htc m4 boot.img
 
-6、开始编译，执行命令(把cp2dug替换为自己的机型):
+6、开始编译，执行命令(把m4替换为自己的机型):
 
 . build/tools/device/makerecoveries.sh full_m4-eng
 
